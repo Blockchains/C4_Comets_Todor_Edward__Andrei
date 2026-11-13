@@ -6,7 +6,7 @@ resolution = true
 skip-lint = false
 
 [programs.devnet]
-namegen = "njCkgAPdDfewLAZmWZE1ckRDGAiPTwvWMouGGNCJkiR"
+namegen = "ERvcD84tLcdeYgb4RM7WhJLBFDmous4D6uk32GSEnjPG"
 
 [registry]
 url = "https://api.apr.dev"

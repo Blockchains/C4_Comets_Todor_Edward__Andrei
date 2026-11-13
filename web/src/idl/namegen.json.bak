@@ -1,9 +1,10 @@
 {
-  "address": "njCkgAPdDfewLAZmWZE1ckRDGAiPTwvWMouGGNCJkiR",
+  "address": "ERvcD84tLcdeYgb4RM7WhJLBFDmous4D6uk32GSEnjPG",
   "metadata": {
     "name": "namegen",
     "version": "0.1.0",
-    "spec": "0.1.0"
+    "spec": "0.1.0",
+    "address": "ERvcD84tLcdeYgb4RM7WhJLBFDmous4D6uk32GSEnjPG"
   },
   "instructions": [
     {

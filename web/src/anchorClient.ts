@@ -35,7 +35,7 @@ export function getProvider() {
 // Program Anchor
 export function getProgram(): { program: Program; provider: anchor.AnchorProvider } {
   const provider = getProvider();
-  const programId = new PublicKey("njCkgAPdDfewLAZmWZE1ckRDGAiPTwvWMouGGNCJkiR");
+  const programId = new PublicKey((idl as any).address);
 
   
   const program = new (anchor as any).Program(idl as Idl, programId, provider) as Program;
@@ -47,7 +47,7 @@ export function getProgram(): { program: Program; provider: anchor.AnchorProvide
 export function getPda(authority: PublicKey) {
   const [pda] = PublicKey.findProgramAddressSync(
     [Buffer.from("user"), authority.toBuffer()],
-    new PublicKey("njCkgAPdDfewLAZmWZE1ckRDGAiPTwvWMouGGNCJkiR")
+    new PublicKey((idl as any).address)
   );
   return pda;
 }
