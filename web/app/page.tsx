@@ -165,8 +165,9 @@ export default function Page() {
         return;
       }
 
-      const decoded: any = coder.accounts.decode("UserData", info.data);
-      const name = u8ToStringTrim(decoded.name);
+      // Layout: 8-byte discriminator, 32-byte owner, 64-byte name. Avoid BorshCoder here —
+      // the IDL's UserData account type is not always registered in a way decode() returns .name.
+      const name = u8ToStringTrim(info.data.slice(8 + 32, 8 + 32 + 64));
       setOnchain(name || "—");
       setStatus("Read OK.");
     } catch (e: any) {
